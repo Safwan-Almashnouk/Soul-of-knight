@@ -63,7 +63,7 @@ public class Animatiosn : MonoBehaviour
             ani.ResetTrigger("DodgeF");
 
         }
-        if (Input.GetKey(KeyCode.LeftControl) && (Input.GetAxis("Vertical") > 0))
+        if (Input.GetKeyDown(KeyCode.LeftControl) && (Input.GetAxis("Vertical") > 0))
         {
             ani.ResetTrigger("Idle");
             ani.ResetTrigger("Walk");
@@ -72,6 +72,32 @@ public class Animatiosn : MonoBehaviour
             ani.SetTrigger("DodgeF");
             
         }
-
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            ani.SetTrigger("Slash1");
+            ani.ResetTrigger("Idle");
+            ani.ResetTrigger("Walk");
+            ani.ResetTrigger("WalkR");
+            ani.ResetTrigger("Jump");
+            ani.ResetTrigger("DodgeF");
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            ani.SetTrigger("Slash2");
+            ani.ResetTrigger("Idle");
+            ani.ResetTrigger("Walk");
+            ani.ResetTrigger("WalkR");
+            ani.ResetTrigger("Jump");
+            ani.ResetTrigger("DodgeF");
+        }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            ani.SetTrigger("Slash3");
+            ani.ResetTrigger("Idle");
+            ani.ResetTrigger("Walk");
+            ani.ResetTrigger("WalkR");
+            ani.ResetTrigger("Jump");
+            ani.ResetTrigger("DodgeF");
+        }
     }
 }

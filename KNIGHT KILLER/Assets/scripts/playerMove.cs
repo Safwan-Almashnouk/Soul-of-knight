@@ -6,13 +6,13 @@ using UnityEngine;
 public class playerMove : MonoBehaviour
 {
 
-    [SerializeField] private float Walkspeed = 50f;
-    [SerializeField] private float rotSpeed = 50f;
-    [SerializeField] private float runSpeed = 80f;
-    [SerializeField] private float DefaultSpeed = 50f;
+    [SerializeField] private float Walkspeed = 200f;
+    [SerializeField] private float rotSpeed = 200f;
+    [SerializeField] private float runSpeed = 800f;
+    [SerializeField] private float DefaultSpeed = 200f;
     private Rigidbody rb;
     public Animator ani;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +24,9 @@ public class playerMove : MonoBehaviour
     void Update()
     {
         AnimatorStateInfo clips = ani.GetCurrentAnimatorStateInfo(0);
-        if (ani.GetCurrentAnimatorStateInfo(0).IsName("DodgeF"))
+        if (ani.GetCurrentAnimatorStateInfo(0).IsName("DodgeF") || ani.GetCurrentAnimatorStateInfo(0).IsName("Slash1") || ani.GetCurrentAnimatorStateInfo(0).IsName("Slash2") || ani.GetCurrentAnimatorStateInfo(0).IsName("Slash3"))
         {
-            Debug.Log("DodgeF");
+          ;
             DefaultSpeed = 0.0f;
             runSpeed= 0.0f;
             rotSpeed= 0.0f;
@@ -35,7 +35,7 @@ public class playerMove : MonoBehaviour
         {
             DefaultSpeed = 200f;
             rotSpeed = 200f;
-            runSpeed= 300f;
+            runSpeed= 800f;
         }
 
         float move = Time.deltaTime * Walkspeed * Input.GetAxis("Vertical");
