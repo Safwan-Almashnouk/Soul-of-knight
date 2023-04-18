@@ -10,7 +10,7 @@ public class WeaponManager : MonoBehaviour
     {
         if (weapon != null)
         {
-            var col = weapon.GetComponent<Collider>();
+            Collider col = weapon.GetComponent<Collider>();
 
             if (col !=null) 
             { 

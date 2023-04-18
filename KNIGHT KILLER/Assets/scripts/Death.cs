@@ -7,7 +7,7 @@ public class Death : MonoBehaviour
     
 {
     public HealthSystem PlayerHealth;
-   
+    
     public void Update ()
     {
        if (PlayerHealth.Health <= 0)
